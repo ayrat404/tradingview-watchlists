@@ -12,8 +12,8 @@ if __name__ == "__main__":
     response = requests.get(url)
 
     if response.status_code != 200:
-        print(f"Error: Unable to fetch data, status code {response.status_code}")
-        print(f"Response body: {response.text}")
+        print(f"Error: Unable to fetch data, status code {response.status_code}", file=sys.stderr)
+        print(f"Response body: {response.text}", file=sys.stderr)
         sys.exit(1)
 
     symbols = map(lambda x: x["name"], response.json()["result"])
