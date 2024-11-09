@@ -1,5 +1,6 @@
 import argparse
 import requests
+import sys
 
 parser = argparse.ArgumentParser(description="Bybit tickers")
 parser.add_argument("-q", "--quote-asset")
